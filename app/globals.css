@@ -7,7 +7,6 @@
   --muted: #8e5d7e;
   --line: #f4cedf;
   --accent: #e75497;
-  --accent-soft: #fff1f7;
   --radius: 16px;
   --shadow: 0 14px 36px rgba(231, 84, 151, 0.16);
 }
@@ -19,7 +18,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
   color: var(--text);
   background: radial-gradient(circle at 10% 8%, #ffffff 0%, var(--bg-1) 38%, var(--bg-2) 70%, var(--bg-3) 100%);
   display: grid;
@@ -49,7 +48,7 @@ body {
 }
 
 .hearts span::before {
-  content: "\2665";
+  content: '\2665';
   display: block;
   color: color-mix(in srgb, var(--accent) 65%, white);
   font-size: var(--size);
@@ -133,7 +132,7 @@ label {
   gap: 10px;
 }
 
-input[type="date"] {
+input[type='date'] {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 12px 14px;
