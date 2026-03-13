@@ -1,0 +1,113 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(101, 186, 255, 0.2), transparent 44%),
+    radial-gradient(circle at 82% 18%, rgba(255, 116, 162, 0.18), transparent 42%),
+    linear-gradient(180deg, #060a13 0%, #070c16 48%, #05080f 100%);
+}
+
+.glow {
+  position: absolute;
+  inset: auto auto -120px 50%;
+  width: min(74vw, 720px);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(139, 216, 255, 0.28), rgba(109, 156, 250, 0.06) 44%, transparent 74%);
+  filter: blur(16px);
+  pointer-events: none;
+}
+
+.panel {
+  width: min(760px, 100%);
+  position: relative;
+  z-index: 1;
+  border-radius: 22px;
+  padding: clamp(22px, 4.6vw, 36px);
+  border: 1px solid rgba(154, 202, 255, 0.24);
+  background: linear-gradient(160deg, rgba(10, 17, 31, 0.92), rgba(8, 14, 27, 0.84));
+  box-shadow: 0 26px 68px rgba(0, 0, 0, 0.45);
+}
+
+.kicker {
+  margin: 0 0 8px;
+  color: #97daff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.panel h1 {
+  margin: 0;
+  color: #eff8ff;
+  font-size: clamp(1.6rem, 3.8vw, 2.3rem);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #c0d6eb;
+  line-height: 1.45;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid rgba(160, 209, 255, 0.28);
+  border-radius: 16px;
+  padding: 16px;
+  background: linear-gradient(170deg, rgba(17, 28, 45, 0.84), rgba(12, 22, 38, 0.78));
+  display: grid;
+  gap: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card strong {
+  color: #f2f8ff;
+  font-size: 1.06rem;
+}
+
+.card span {
+  color: #bad0e4;
+  line-height: 1.42;
+}
+
+.tag {
+  width: fit-content;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8ed9ff;
+  background: rgba(71, 165, 223, 0.2);
+  border: 1px solid rgba(146, 217, 255, 0.28);
+  border-radius: 999px;
+  padding: 3px 8px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(173, 224, 255, 0.62);
+  box-shadow: 0 14px 28px rgba(12, 38, 67, 0.36);
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

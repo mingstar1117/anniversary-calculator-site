@@ -1,3 +1,8 @@
 node_modules
 .next
 .DS_Store
+.next_backup_*
+.next_rebuild_*
+.next_cache_bad_*
+.vercel
+playground2
